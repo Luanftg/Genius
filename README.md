@@ -2,7 +2,7 @@
 
 ## 1.  DESAFIO
 
-   Nesse projeto, o desafio será criar um jogo Genius utilizando apenas HTML, CSS e Javascript de forma introdutória, sendo o principal conceito, CSS Grid, manipulação de Array e Arrow Functions.
+"Nesse projeto, o desafio será criar um jogo Genius utilizando apenas HTML, CSS e Javascript de forma introdutória, sendo o principal conceito, CSS Grid, manipulação de Array e Arrow Functions.
 
 --- 
 
@@ -39,3 +39,13 @@
 
 
 ## 3.  Projeto Finalizado
+
+#### Inovações:
+<ol>
+<li>Efeitos sonoros nos eventos de "click"</li>
+
+<li>
+
+</ol>
+#### REFERÊNCIAS
+1.  [Audio]([https://link](http://www.developphp.com/video/JavaScript/Button-Sound-Effects-Tutorial-Audible-Menu-Systems))

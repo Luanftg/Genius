@@ -2,6 +2,11 @@ let order = [];
 let clickedOrder = [];
 let score = 0;
 
+const start = document.querySelector('.initialText');
+
+var sound = new Audio();
+var soundPath = ['src/music1.mp3', 'src/music2.mp3', 'src/music3.mp3', 'src/musica4.mp3'];
+
 //0 - verde
 //1 - vermelho
 //2 - amarelo
@@ -12,29 +17,41 @@ const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
 
+//sorteia numero da cor a ser clicada e chama função acende cor
 let shuffleOrder = () => {
     let colorOrder = Math.floor(Math.random() * 4);
     order[order.length] = colorOrder;
     clickedOrder = [];
+    //adiciona valor sorteado a sequencia esperada e atribui a classe css relacionada (grid area) que deverá ser clicada
+    for (let i in order) {
+        let elementColor = createColorElement(order[i]);
+        lightColor(elementColor, Number(i) + 1);
+
+    }
 }
 
-for (let i in order) {
-    let elementColor = createColorElement(order[i]);
-    lightColor(elementColor, Number(i) + 1);
-}
+//acende a (grid area) próxima cor
+let lightColor = (element, number) => {
 
-//acende a próxima cor
-let lightColor = () => (element, number) => {
-    number = number * 500;
+    let i = number - 1;
+
+    number = number * 700;
     setTimeout(() => {
         element.classList.add('selected');
+        console.log(order[i]);
+        console.log(element);
+        sound.src = soundPath[order[i]];
+        console.log(soundPath[order[i]]);
+
+        sound.play();
     }, number - 250);
+
     setTimeout(() => {
         element.classList.remove('selected');
-    })
+    });
 }
 
-//checa se os botoes clicados são os mesmos da ordem gerada noo jogo
+//checa se os botoes clicados são os mesmos da ordem gerada no jogo
 let checkOrder = () => {
     for (let i in clickedOrder) {
         if (clickedOrder[i] != order[i]) {
@@ -44,6 +61,7 @@ let checkOrder = () => {
     }
 
     if (clickedOrder.length == order.length) {
+        score++;
         alert(`Pontuação: ${score}!\nVocê acertou! Iniciando próximo nível!`);
         nextLevel();
     }
@@ -53,6 +71,9 @@ let checkOrder = () => {
 let click = (color) => {
     clickedOrder[clickedOrder.length] = color;
     createColorElement(color).classList.add('selected');
+    console.log(color);
+    sound.src = soundPath[color];
+    sound.play();
 
     setTimeout(() => {
         createColorElement(color).classList.remove('selected');
@@ -75,7 +96,6 @@ let createColorElement = (color) => {
 
 //função para o próximo nível do jogo
 let nextLevel = () => {
-    score++
     shuffleOrder();
 }
 
@@ -91,10 +111,11 @@ let gameOver = () => {
 
 //função de inicia o jogo
 let playGame = () => {
-    alert('Bem vindo ao Genesis!Iniciando novo jogo!');
+    alert('Bem vindo ao BANANA BIRD \n Uma remontagem do clássico Donkey Kong Contry 3! \n Iniciando novo jogo!');
     score = 0;
+    //nextLevel();
+    shuffleOrder();
 
-    nextLevel();
 }
 
 //eventos de clique para as cores
@@ -104,4 +125,7 @@ yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
 
 //inicio do jogo
-playGame();
+//playGame();
+start.addEventListener('click', () => {
+    playGame();
+})
