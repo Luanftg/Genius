@@ -1,12 +1,16 @@
-# :video_game: Genius
+<center>
 
-## 1.  DESAFIO
+# Desafio de Projeto - Órbi Game Develloper 
+
+## :video_game: Genius :video_game:
 
 "Nesse projeto, o desafio será criar um jogo Genius utilizando apenas HTML, CSS e Javascript de forma introdutória, sendo o principal conceito, CSS Grid, manipulação de Array e Arrow Functions.
 
---- 
+</center>
 
-## 2.  SOLUÇÃO
+---
+
+## SOLUÇÃO
 
 - Estrutura de dados:
   - Arrays
@@ -15,37 +19,37 @@
   - Manipulação da DOM (document.querySelector())
   - Expressões condicionais
   - Laços de repetição
-  - setTimeOut()
+  - `.setTimeOut()`
   - classlist (.add e .remove)
-  - .addEventListener()
+  - `.addEventListener()`
   - display = grid/flex
   - grid-template-areas
   - grid-gap
   - ViewPorts (Hight, Width)
-  -  Math.floor
-  -  Math.randon
+  - Math.floor
+  - Math.randon
   -  
-- Implementações (Call back Functions)
-  - [ ] lightColor()
-  - [ ] checkOrder()
-  - [ ] playGame()
-  - [ ] nextLevel()
-  - [ ] click()
-  - [ ] createColorElement()
-  - [ ] shuffleOrder()
-  - [ ] gameOver()
-    
----
+- Funcionalidades implementadas em sala (Call-back Functions)
+  - [X] lightColor()
+  - [X] checkOrder()
+  - [X] playGame()
+  - [X] nextLevel()
+  - [X] click()
+  - [X] createColorElement()
+  - [X] shuffleOrder()
+  - [X] gameOver()
 
+---
 
 ## 3.  Projeto Finalizado
 
-#### Inovações:
-<ol>
-<li>Efeitos sonoros nos eventos de "click"</li>
+#### Minhas Implementações
 
-<li>
+1. Efeitos sonoros nos eventos de "click" e lightColor()
+2. Pontuação
+3. Botão Start
+4. Imagem de Donkey Kong Contry 3  
 
-</ol>
 #### REFERÊNCIAS
-1.  [Audio]([https://link](http://www.developphp.com/video/JavaScript/Button-Sound-Effects-Tutorial-Audible-Menu-Systems))
+
+1. [Audio]([https://link](http://www.developphp.com/video/JavaScript/Button-Sound-Effects-Tutorial-Audible-Menu-Systems))
